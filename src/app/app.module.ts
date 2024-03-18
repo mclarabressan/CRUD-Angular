@@ -19,6 +19,8 @@ import { RouterModule } from '@angular/router';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { AuthService } from './components/login/auth.service';
+import { LoginComponent } from './components/login/login.component';
 import { ProductCreateComponent } from './components/product/product-create/product-create.component';
 import { ProductDeleteComponent } from './components/product/product-delete/product-delete.component';
 import { ProductReadComponent } from './components/product/product-read/product-read.component';
@@ -49,7 +51,8 @@ import { ProductCrudComponent } from './views/product-crud/product-crud.componen
     ProductReadComponent,
     ProductRead2Component,
     ProductUpdateComponent,
-    ProductDeleteComponent
+    ProductDeleteComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -71,7 +74,8 @@ import { ProductCrudComponent } from './views/product-crud/product-crud.componen
     MatSelectModule
   ],
   providers: [
-    provideAnimationsAsync()
+    provideAnimationsAsync(),
+    AuthService
   ],
   bootstrap: [AppComponent]
 })
